@@ -19,7 +19,7 @@ app.get('/styles.css', (req, res) => {
   res.sendFile(path.join(`${__dirname}/../client/styles.css`));
 });
 
-server.listen(3000);
+server.listen(process.env.PORT || 3000);
 
 const io = socketio(server);
 
